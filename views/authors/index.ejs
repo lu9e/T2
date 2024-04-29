@@ -1,0 +1,22 @@
+<h2>Search your library.....</h2>
+
+<!--Now we will be using the method GET in the form 
+due to the fact that we will be asking for the author the user has 
+entered-->
+
+<form action="/authors" method="GET">
+    <label>Name</label>
+    <input type="text" name="name" value="<%= searchF.name %>">
+    <button type="submit">Search</button>
+</form>
+
+<br>
+<br>
+
+<!--
+    This will allow me to display each author the user has searched for 
+    on the page of authors 
+-->
+<% authors.forEach(author => { %>
+    <div> <%= author.name %> </div>
+<% }) %>
