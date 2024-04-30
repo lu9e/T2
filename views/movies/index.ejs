@@ -1,0 +1,33 @@
+<h2>Search your Movie library.....</h2>
+
+<!--Now we will be using the method GET in the form 
+due to the fact that we will be asking for the author the user has 
+entered-->
+
+<form action="/movies" method="GET">
+
+    <div>
+        <label>Title: </label>
+        <input type="text" name="title" value="<%= searchF.title %>">
+    </div>
+
+    <div>
+        <label>Release Date: </label>
+        <input type="date" name="releaseDate" value="<%= searchF.releaseDate %>">
+    </div>
+
+    <button type="submit">Search</button>
+</form>
+
+<br>
+<br>
+
+<!--
+    This will allow me to display each author the user has searched for 
+    on the page of authors 
+-->
+<div>
+    <% movies.forEach(movie => { %>
+        <img height="250" width="200" src="<%= movie.coverImagePath %>">
+    <% }) %>
+</div>

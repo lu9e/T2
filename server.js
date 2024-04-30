@@ -9,6 +9,7 @@ const expressLayouts = require('express-ejs-layouts')
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
 const bodyParser = require('body-parser')
+const movieRouter = require('./routes/movies')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
@@ -26,6 +27,7 @@ db.once('open', () => console.log('Connection to mongoose was a success!'))
 
 app.use('/', indexRouter)
 app.use('/authors', authorRouter)
+app.use('/movies', movieRouter)
 
 
 app.listen(process.env.PORT || 3000)

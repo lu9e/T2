@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 
 
 //This will deal with getting the new authors route aka(GET)
-router.get ('/new', async (req,res) => {
+router.get ('/new', (req,res) => {
     res.render('authors/new', {
         author: new Author()
     })

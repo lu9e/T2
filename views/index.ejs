@@ -1,1 +1,7 @@
-Middle
+<h2>Recent Activity:</h2>
+
+<div>
+    <% movies.forEach(movie => { %>
+        <img height="250" width="200" src="<%= movie.coverImagePath %>">
+    <% }) %>
+</div>
