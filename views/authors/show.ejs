@@ -1,0 +1,11 @@
+<h2><%= author.name %></h2>
+<a href="/authors/<%= author.id %>/edit">Modify</a>
+<%- include('../partials/deleteForm',
+{url:`/authors/${author.id}`}) %>
+
+<% if (moviesByAuthor.length > 0)  {%>
+    <h2>Movies By The Director:</h2>
+    <% moviesByAuthor.forEach(movie => { %>
+        <img height="150" width="100" src="<%= movie.coverImagePath %>">
+    <% }) %>
+<% } %>
