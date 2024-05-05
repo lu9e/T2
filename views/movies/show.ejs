@@ -1,0 +1,27 @@
+<h2><%= movie.title %></h2>
+<img width="250" height="250" src="<%= movie.coverImagePath %>">
+<div>
+    <!--This is possiable through the populate -->
+    Director: <%= movie.author.name %>
+</div>
+
+<div>
+    <!--This is possiable through the populate -->
+    Release Date: <%= movie.releaseDate.toDateString()%>
+</div>
+
+
+<div>
+    <!--This is possiable through the populate -->
+    Run Time: <%= movie.timeCount%> hrs
+</div>
+
+<div>
+    <!--This is possiable through the populate -->
+    Description: <%=movie.description%> 
+</div>
+
+
+<a href="/movies/<%= movie.id %>/edit">Edit</a>
+<a href="/authors/<%= movie.author.id %>">Other Films by <%= movie.author.name %> </a>
+<%- include('../partials/deleteForm', {url: `/movies/${movie.id}`}) %>

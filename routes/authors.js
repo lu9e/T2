@@ -44,6 +44,15 @@ router.post('/', async (req,res) => {
     }
 })
 
+//This will deal with getting the new authors route aka(GET)
+router.get ('/new', (req,res) => {
+    res.render('authors/new', {
+        author: new Author()
+    })
+})
+
+
+
 //Here we are defining a route for dealing with HTTP Get req for the director
 //portion
 router.get('/:id', async(req, res) => {
@@ -74,13 +83,6 @@ router.get('/:id/edit', async (req, res) => {
   
 })
 
-
-//This will deal with getting the new authors route aka(GET)
-router.get ('/new', (req,res) => {
-    res.render('authors/new', {
-        author: new Author()
-    })
-})
 
 
 
