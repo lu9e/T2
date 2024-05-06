@@ -1,7 +1,37 @@
-<h2>Recent Activity:</h2>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/main">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="title-holder">Welcome!</h1>
+    <p>To NET your favorite movie tracker.</p>
+
+    <br>
+    <br> <br>
+    <br> <br>
+    <h2 class="title-holder">Recent Added Movies:</h2>
+
+   
 
 <div>
     <% movies.forEach(movie => { %>
+        <a href="/movies/<%= movie.id %>">
         <img height="250" width="200" src="<%= movie.coverImagePath %>">
+        </a>
     <% }) %>
 </div>
+
+
+
+
+
+    
+</body>
+</html>

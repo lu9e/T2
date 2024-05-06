@@ -1,11 +1,11 @@
 
-<h2>Add Another Director</h2>
-<h1>holder</h1>
+<h2 class="title-holder">Add Another Director</h2>
 <!--
     Here we will put our get route to work using form
 -->
 <form action="/authors" method="POST">
-    <%- include('_form_fields') %>
+    <label>Director: </label>
+    <input type="text" name="name" value="<%= author.name %>">
     <a href="/authors">Cancel</a>
     <button type="submit">Create</button>
 </form>

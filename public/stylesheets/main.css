@@ -1,0 +1,34 @@
+@import 'shared/nav.css';
+@import 'shared/index.css';
+@import 'shared/buttons.css';
+:root {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: black;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 9rem;
+    margin-bottom: 3rem;
+}
+
+.inner-container {
+    margin: 200px;
+}
+
+.title-holder {
+    font-size: 2rem;
+    font-weight: 900;
+}
+

@@ -1,0 +1,42 @@
+.btn {
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: .5rem ;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.main-btn {
+    color: black;
+    background-color: white;
+
+}
+
+.del {
+    border: 1px solid black;
+    border-radius: .5rem;
+    padding: .5rem ;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: red;
+}
+
+.placeholder {
+    display: flex;
+    align-items: flex-start;
+}
+
+.placeholder > * {
+    margin-left: 1rem;
+}
+
+.placeholder > *:first-child{
+    margin-left: 0;
+}
+
+
