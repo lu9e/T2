@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.6;
+}
+
+label {
+    font-weight: bold; 
+    margin-bottom: 0.5rem; 
+}
+
+
+.form-format {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px; 
+    margin: 0 auto; 
+    margin-left: 0; 
+}
+
+.form-column {
+    flex: 0 0 50%; 
+    padding: 0 1rem;
+}
+
+.form-item {
+    margin-bottom: 1.5rem; 
+}
+
+.form-item input[type="text"], .form-item select, .form-item textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    transition: border-color 0.3s ease;
+    font-size: 0.9rem; 
+}
+
+
+
+
+

@@ -1,11 +1,80 @@
 
-<h2 class="title-holder">Edit Movie: </h2>
 
-<!--
-    Here we will put our get route to work using form
--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/main">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 class="title-holder">Edit Movie: </h2>
+
+<!--Here we will put our get route to work using form-->
+
 <form action="/movies/<%=movie.id%>?_method=PUT" method="POST" >
-    <%- include('_form_fields') %>
-    <a href="/movies">Cancel</a>
-    <button type="submit">Modify</button>
+    <div class="form-format">
+        <div class="form-item">
+            <label>Title: </label>
+            <input type="text" name="title" value="<%= movie.title %>">
+        </div>
+    
+        <div class="form-item">
+            <label>Director:</label>
+            <select name="author">
+            <% authors.forEach(author => { %>
+                <% if(author.id === movie.author) { %>
+                    <option selected label="<%= author.name %>" value="<%= author.id%>">
+                <%} else {%>
+                    <option label="<%= author.name %>" value="<%= author.id%>">
+                <% } %>
+            <% }) %>
+            </select>
+        </div>
+    
+    
+        <div class="form-item">
+            <label>Release Date :</label>
+            <input type="date" name="releaseDate" 
+                value="<%= movie.releaseDate == null ? '' :
+                    movie.releaseDate.toISOString().split('T')[0] %>"> 
+        </div>
+    </div>
+    
+    <div class="form-format">
+        <div class="form-item">
+            <label>Run Time:</label>
+            <input type="number" name="timeCount" min="0.1"
+                value="<%= movie.timeCount %>"> 
+        </div>
+    </div>
+    
+    
+    <div class="form-format">
+        <div class="form-item-fixed">
+            <label>Movie Cover:</label>
+            <input type="file" name="cover" class="filepond"> 
+        </div>
+    
+        <div class="form-item form-item-left">
+            <label>Description/Rating: </label>
+            <textarea name="description"><%=movie.description %> </textarea>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="form-format ">
+        <button class="del">
+            <a href="/movies">Cancel</a>
+        </button>
+        
+    <button class="btn" type="submit">Modify</button>
+</div>
 </form>
+    
+</body>
+</html>

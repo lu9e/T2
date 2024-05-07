@@ -1,12 +1,16 @@
 <h2 class="title-holder"><%= author.name %></h2>
-<%- include('../partials/deleteForm',
+<div class="placeholder">
+    <%- include('../partials/deleteForm',
 {url:`/authors/${author.id}`}) %>
 
+</div>
+
+
 <% if (moviesByAuthor.length > 0)  {%>
-    <h2>Movies By The Director:</h2>
+    <h2 class="title-holder">Movies By The Director:</h2>
     <% moviesByAuthor.forEach(movie => { %>
         <a href="/movies/<%= movie.id %>">
-        <img height="150" width="100" src="<%= movie.coverImagePath %>">
+        <img height="300" width="200" src="<%= movie.coverImagePath %>">
         </a>
     <% }) %>
 <% } %>

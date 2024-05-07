@@ -1,13 +1,21 @@
-<h2 class="title-holder">Search your library.....</h2>
+<h2 class="title-holder">Search your director library.....</h2>
 
 <!--Now we will be using the method GET in the form 
 due to the fact that we will be asking for the author the user has 
 entered-->
 
 <form action="/authors" method="GET">
-    <label>Name</label>
-    <input type="text" name="name" value="<%= searchF.name %>">
-    <button class="btn" type="submit">Search</button>
+
+    <div class="form-format">
+        <div class="form-item">
+            <label>Name:</label>
+            <input type="text" name="name" value="<%= searchF.name %>">
+        </div>
+    </div>
+    <div class="form-format">
+        <button class="btn" type="submit">Search</button>
+    </div>
+    
 </form>
 
 <br>

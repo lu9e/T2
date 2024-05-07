@@ -1,6 +1,7 @@
 @import 'shared/nav.css';
 @import 'shared/index.css';
 @import 'shared/buttons.css';
+@import 'shared/movieForm.css';
 :root {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;

@@ -1,42 +1,51 @@
-<div>
-    <label>Title: </label>
-    <input type="text" name="title" value="<%= movie.title %>">
-</div>
+<div class="form-format">
+    <div class="form-item">
+        <label>Title: </label>
+        <input type="text" name="title" value="<%= movie.title %>">
+    </div>
 
-<div>
-    <label>Director:</label>
-    <select name="author">
-    <% authors.forEach(author => { %>
-        <% if(author.id === movie.author) { %>
-            <option selected label="<%= author.name %>" value="<%= author.id%>">
-         <%} else {%>
-            <option label="<%= author.name %>" value="<%= author.id%>">
-    <% } %>
-<% }) %>
-</select>
-</div>
-
-<div>
-    <label>Release Date:</label>
-    <input type="date" name="releaseDate" 
-        value="<%= movie.releaseDate == null ? '' :
-            movie.releaseDate.toISOString().split('T')[0] %>"> 
-</div>
-
-<div>
-    <label>Run Time:</label>
-    <input type="number" name="timeCount" min="0.1"
-        value="<%= movie.timeCount %>"> 
-</div>
+    <div class="form-item">
+        <label>Director:</label>
+        <select name="author">
+        <% authors.forEach(author => { %>
+            <% if(author.id === movie.author) { %>
+                <option selected label="<%= author.name %>" value="<%= author.id%>">
+            <%} else {%>
+                <option label="<%= author.name %>" value="<%= author.id%>">
+            <% } %>
+        <% }) %>
+        </select>
+    </div>
 
 
-<div>
-    <label>Movie Cover</label>
-    <input type="file" name="cover" class="filepond"> 
+    <div class="form-item">
+        <label>Release Date:</label>
+        <input type="date" name="releaseDate" 
+            value="<%= movie.releaseDate == null ? '' :
+                movie.releaseDate.toISOString().split('T')[0] %>"> 
+    </div>
 </div>
 
-<div>
-    <label>Description/Rating: </label>
-    <textarea name="description"><%=movie.description %> </textarea>
+<div class="form-format">
+    <div class="form-item">
+        <label>Run Time:</label>
+        <input type="number" name="timeCount" min="0.1"
+            value="<%= movie.timeCount %>"> 
+    </div>
 </div>
+
+
+<div class="form-format">
+    <div class="form-item-fixed">
+        <label>Movie Cover:</label>
+        <input type="file" name="cover" class="filepond"> 
+    </div>
+
+    <div class="form-item form-item-left">
+        <label>Description/Rating: </label>
+        <textarea name="description"><%=movie.description %> </textarea>
+    </div>
+</div>
+
+
 

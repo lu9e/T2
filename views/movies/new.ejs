@@ -1,11 +1,14 @@
 
-<h class="title-holder"2>Add another movie: </h2>
+<h class="title-holder"2>Add Another Movie: </h2>
 
 <!--
     Here we will put our get route to work using form
 -->
 <form action="/movies" method="POST" >
     <%- include('_form_fields') %>
-    <a href="/movies">Cancel</a>
-    <button type="submit">Create</button>
+    <button class="del">
+        <a href="/movies">Cancel</a>
+    </button>
+    
+    <button class="btn" type="submit">Create</button>
 </form>
