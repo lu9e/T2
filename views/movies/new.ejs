@@ -1,14 +1,35 @@
 
-<h class="title-holder"2>Add Another Movie: </h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/stylesheets/authorStyle/edit.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h2 class="title-holder"2>Add Another Movie: </h2>
 
 <!--
     Here we will put our get route to work using form
 -->
 <form action="/movies" method="POST" >
-    <%- include('_form_fields') %>
+    <div class="form-format">
+
+        <%- include('_form_fields') %>
+
+    </div>
     <button class="del">
         <a href="/movies">Cancel</a>
     </button>
     
     <button class="btn" type="submit">Create</button>
 </form>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* Modernize typography */
+h2.title-holder {
+    font-size: 40px;
+    font-weight: 500;
+    color: #333; /* Adjust to your color scheme */
+    font-style: italic;
+}
+
+/* Style form elements */
+.form-item label {
+    font-weight: 500;
+    font-size: 30px;
+    color: #666; /* Adjust to your color scheme */
+}
+
+.form-item input[type="text"],
+.form-item input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Style search button */
+.btn {
+    background-color: black; /* Adjust to your color scheme */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(79, 77, 77); /* Adjust to your color scheme */
+    color:white;
+}
+
+
+
+.container {
+    position: relative;
+    text-align: center; 
+    justify-content: center; 
+    align-items: center;
+    padding-top: 500px; 
+   
+}
+
+
+.container h3 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding-top: 20px;
+    color: black;
+    font-style: italic;
+    
+}
+
+.container {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 90px;
+    padding-bottom: 90px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 15px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+.movie-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.movie-item:hover {
+    transform: translateY(-18px);
+}
+
+.movie-item img {
+    padding-top: 20px;
+    width: 70%;
+    height: auto;
+}

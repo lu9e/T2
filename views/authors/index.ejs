@@ -1,22 +1,32 @@
-<h2 class="title-holder">Search your director library.....</h2>
 
-<!--Now we will be using the method GET in the form 
-due to the fact that we will be asking for the author the user has 
-entered-->
 
-<form action="/authors" method="GET">
 
-    <div class="form-format">
-        <div class="form-item">
-            <label>Name:</label>
-            <input type="text" name="name" value="<%= searchF.name %>">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/public/stylesheets/shared/footer.css">
+    <link rel="stylesheet" href="/public/stylesheets/authorStyle/searchDir.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h2 class="title-holder"><i class="fas fa-search icon"></i> Search your director library.....</h2>
+
+    <form action="/authors" method="GET" class="modern-form">
+        <div class="form-holder">
+            <div class="form-item">
+                <label for="name"><i class="fas fa-user icon"></i> Name:</label>
+                <input type="text" name="name" id="name" value="<%= searchF.name %>">
+            </div>
         </div>
-    </div>
-    <div class="form-format">
-        <button class="btn" type="submit">Search</button>
-    </div>
-    
-</form>
+        <div class="button-group">
+            <button class="btn" type="submit"><i class="fas fa-search icon"></i> Search</button>
+        </div>
+    </form>
 
 <br>
 <br>
@@ -25,20 +35,25 @@ entered-->
     This will allow me to display each author the user has searched for 
     on the page of authors 
 -->
-<% authors.forEach(author => { %>
-    <div> <%= author.name %> </div>
-    <div class="placeholder">
+<div class="author-list">
+    <% authors.forEach(author => { %>
+        <div class="author-card">
+            <div class="author-name"><%= author.name %></div>
+            <div class="author-actions">
+                <a class="action-link" href="/authors/<%= author.id %>"> <i class="fas fa-eye"></i> View </a>
+                <%- include('../partials/deleteForm', { url: `/authors/${author.id}` }) %>
+            </div>
+        </div>
+    <% }) %>
+</div>
 
-        <button class="btn">
-            <a  href="/authors/<%= author.id  %>">View</a>
-        </button>
-        
-        
-    
-    
-        <%- include('../partials/deleteForm',
-        {url:`/authors/${author.id}`}) %>
 
-    </div>
-<% }) %>
+
+<%- include('footer') %>
+
+
+
+    
+</body>
+</html>
    

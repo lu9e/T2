@@ -5,28 +5,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/main">
+    <link rel="stylesheet" href="/public/stylesheets/shared/main8.css">
+    <link rel="stylesheet" href="/public/stylesheets/shared/footer.css">
     <title>Document</title>
 </head>
 <body>
 
-    <h1 class="title-holder">Welcome!</h1>
-    <p>To NET your favorite movie tracker.</p>
+    <div class="main-content">
 
+        <div class="ani">
+            <div class="photoG">
+                <div class="picP">
+                    <img src ="/public/images/movie1.PNG" height="780px" width="600px" >
+                </div>
+                <div class="picP">
+                    <img src ="/public/images/movie3.PNG" height="780px" width="600px">
+                </div>
+            </div>
+    
+            <div class="photoG2">
+                <div class="picP2">
+                    <img src ="/public/images/movie2.PNG" height="780px" width="600px" >
+                </div>
+                <div class="picP2">
+                    <img src ="/public/images/movie7.PNG" height="780px" width="600px">
+                </div>
+            </div>
+    
+            <div class="photoG3">
+                <div class="picP3">
+                    <img src ="/public/images/movie4.PNG" height="780px" width="600px" >
+                </div>
+                <div class="picP3">
+                    <img src ="/public/images/movie5.PNG" height="780px" width="600px">
+                </div>
+            </div>
+        </div>
+
+        <div class="picContainer">
+            <div class="text-overlay" id="textOverlay1">
+                <h1><span id="2">NET </span></h1>
+                <h1><span id="3">Movie Watcher Tracker</span></h1>
+                <p>Mеперь купи это сейчас Mеперь купи это сейча(update patch 1.2332 V2) </p>
+                <button id="textB">возьми(info)</button>
+            </div>
+        </div>
+        
+        
+
+
+
+        <div class="container">
+            <h1 class="title-holder">Welcome! !+</h1>
+        
+            <h2 class="title-holder">Recent Added Movies:</h2>
+        
+            <div class="movie-grid">
+                <% movies.forEach(movie => { %>
+                    <div class="movie-item">
+                        <a href="/movies/<%= movie.id %>">
+                            <img src="<%= movie.coverImagePath %>" alt="<%= movie.title %>">
+                        </a>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+
+
+        <div class="container-trend">
+           
+        
+            <h2 class="title-holder2">Trending Directors: </h2>
+        
+            <div class="movie-grid">
+                <div class="movie-item3">
+                    <img src ="/public/images/director.PNG" height="20px" width="20px" >
+                    <h3>holder</h3>
+                </div>
+                <div class="movie-item3">
+                    <img src ="/public/images/director.PNG" height="380px" width="300px">
+                    <h3>holder</h3>
+                </div>
+                <div class="movie-item3">
+                    <img src ="/public/images/director.PNG" height="380px" width="300px" >
+                    <h3>holder</h3>
+                </div>
+                <div class="movie-item3">
+                    <img src ="/public/images/director.PNG" height="380px" width="300px">
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="container-trend">
+           
+        
+            <h2 class="title-holder2">Trending Movies: </h2>
+        
+            <div class="movie-grid">
+                <div class="movie-item3">
+                    <img src ="/public/images/movie4.PNG" height="20px" width="20px" >
+                    <h3>holder</h3>
+                </div>
+                <div class="movie-item3">
+                    <img src ="/public/images/movie4.PNG" height="380px" width="300px">
+                    <h3>holder</h3>
+                </div>
+                <div class="movie-item3">
+                    <img src ="/public/images/movie4.PNG" height="380px" width="300px" >
+                    <h3>holder</h3>
+                </div>
+                <div class="movie-item3">
+                    <img src ="/public/images/movie4.PNG" height="380px" width="300px">
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <br> 
     <br>
-    <br> <br>
-    <br> <br>
-    <h2 class="title-holder">Recent Added Movies:</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <footer class="footer">
+        <div class="fcontainer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Comp</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Payment privacy</a></li>
+                        <li><a href="#">ijff</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>help</h4>
+                    <ul>
+                        <li><a href="#">Customer Service </a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Donation</a></li>
+                        <li><a href="#">Tracker</a></li>
+                        <li><a href="#">QNA</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>online survey</h4>
+                    <ul>
+                        <li><a href="#">sdsd</a></li>
+                        <li><a href="#">sdsd</a></li>
+                        <li><a href="#">sdsdd</a></li>
+                        <li><a href="#">ddss</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>By: Victor Martinez</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
    
 
-<div>
-    <% movies.forEach(movie => { %>
-        <a href="/movies/<%= movie.id %>">
-        <img height="250" width="200" src="<%= movie.coverImagePath %>">
-        </a>
-    <% }) %>
-</div>
+
+
+   
+
+
+<script src="/public/safe/main.js"></script>
 
 
 

@@ -1,16 +1,50 @@
-<h2 class="title-holder"><%= author.name %></h2>
-<div class="placeholder">
-    <%- include('../partials/deleteForm',
-{url:`/authors/${author.id}`}) %>
 
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/public/stylesheets/shared/footer.css">
+    <link rel="stylesheet" href="/public/stylesheets/authorStyle/show.css">
+    <title>Document</title>
+</head>
+<body>
 
 
-<% if (moviesByAuthor.length > 0)  {%>
-    <h2 class="title-holder">Movies By The Director:</h2>
-    <% moviesByAuthor.forEach(movie => { %>
-        <a href="/movies/<%= movie.id %>">
-        <img height="300" width="200" src="<%= movie.coverImagePath %>">
-        </a>
-    <% }) %>
-<% } %>
+    <h2 class="title-holder">Director:</h2>
+    <h2 class="title-holder"><%= author.name %></h2>
+
+    <div class="container">
+
+       
+        
+        <div class="placeholder">
+            <%- include('../partials/deleteForm', {url:`/authors/${author.id}`}) %>
+        </div>
+
+        <div class="movie-grid">
+            <% if (moviesByAuthor.length > 0)  {%>
+                <h2 class="title-holder">Movies By The Director:</h2>
+               
+                    <% moviesByAuthor.forEach(movie => { %>
+                        <div class="movie-item">
+                            <a href="/movies/<%= movie.id %>">
+                                <img src="<%= movie.coverImagePath %>" alt="<%= movie.title %>">
+                            </a>
+                        </div>
+                    <% }) %>
+                </div>
+            <% } %>
+        </div>
+        
+    
+    </div>
+
+
+<%- include('footer') %>
+
+
+    
+</body>
+</html>

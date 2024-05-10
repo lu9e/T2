@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-holder {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-item {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.form-format {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-item-fixed {
+    flex: 1 1 200px;
+    margin-right: 20px;
+}
+
+.form-item-left {
+    flex: 1 1 calc(70% - 20px);
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.del {
+    background-color: #f44336;
+}
+
+.del:hover {
+    background-color: #d32f2f;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn a:hover {
+    text-decoration: underline;
+}

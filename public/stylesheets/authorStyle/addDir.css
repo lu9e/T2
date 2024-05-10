@@ -1,0 +1,65 @@
+/* Modern form styling */
+.title-holder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333; /* Adjust to your color scheme */
+    margin-bottom: 20px;
+}
+
+.form-holder {
+    margin-bottom: 20px;
+}
+
+.form-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-item input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-item input[type="text"]:focus {
+    border-color: green; /* Adjust to your color scheme */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.cancel {
+    background-color: #dc3545; /* Adjust to your color scheme */
+}
+
+.cancel:hover {
+    background-color: #c82333;
+}
+
+/* Icon styling */
+i {
+    margin-right: 5px;
+}

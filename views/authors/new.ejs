@@ -1,22 +1,36 @@
 
-<h2 class="title-holder">Add Director:</h2>
-<!--
-    Here we will put our get route to work using form
--->
-<form action="/authors" method="POST">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/public/stylesheets/authorStyle/addDir.css">
+    <link rel="stylesheet" href="/public/stylesheets/shared/footer.css">
+    <title>Document</title>
+</head>
+<body>
 
-    <div class="form-holder">
-        <div class="form-item">
-            <label>Director: </label>
-            <input type="text" name="name" value="<%= author.name %>">
+
+
+    <h2 class="title-holder">Add Director <i class="fas fa-user-plus"></i></h2>
+
+    <form action="/authors" method="POST" class="modern-form">
+        <div class="form-holder">
+            <div class="form-item">
+                <label><i class="fas fa-user"></i> Director:</label>
+                <input type="text" name="name" value="<%= author.name %>" placeholder="Enter director's name">
+            </div>
         </div>
-    </div>
-    <div class="placeholder">
-        <button class="del">
-            <a href="/authors">Cancel</a>
-        </button>
         
-        <button class="btn"type="submit">Add</button>
-    </div>
-  
-</form>
+        <div class="button-group">
+            <button class="btn cancel" type="button"><i class="fas fa-times"></i> Cancel</button>
+            <button class="btn submit" type="submit"><i class="fas fa-plus"></i> Add</button>
+        </div>
+    </form>
+
+
+    <%- include('footer') %>
+    
+</body>
+</html>

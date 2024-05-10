@@ -22,6 +22,9 @@ app.use(expressLayouts)
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({limit: '10mb', extended: false}))
+app.use('/public/', express.static('./public'));
+
+
 
 const mongoose = require('mongoose')
 mongoose.connect(process.env.DATABASE_URL)

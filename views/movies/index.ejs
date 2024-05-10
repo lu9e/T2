@@ -1,4 +1,19 @@
-<h2 class="title-holder">Search your Movie library.....</h2>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/stylesheets/shared/search.css">
+    <link rel="stylesheet" href="/public/stylesheets/shared/footer.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h2 class="title-holder">Search Your Movie Library .....</h2>
 
 <!--Now we will be using the method GET in the form 
 due to the fact that we will be asking for the author the user has 
@@ -29,14 +44,33 @@ entered-->
 <br>
 <br>
 
+<div class="container">
+
+    <div class="movie-grid">
+        
+            <% movies.forEach(movie => { %>
+                <div class="movie-item">
+                    <a href="/movies/<%= movie.id %>">
+                    <img height="300" width="200" src="<%= movie.coverImagePath %>">
+                    </a>
+                    <h3> <%= movie.title %></h3>
+                </div>
+                
+            <% }) %>
+       
+    </div>
+</div>
+
+
+<%- include('footer') %>
+
 <!--
     This will allow me to display each author the user has searched for 
     on the page of authors 
 -->
-<div>
-    <% movies.forEach(movie => { %>
-        <a href="/movies/<%= movie.id %>">
-        <img height="300" width="200" src="<%= movie.coverImagePath %>">
-        </a>
-    <% }) %>
-</div>
+
+
+
+    
+</body>
+</html>

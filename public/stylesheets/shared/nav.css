@@ -1,68 +1,192 @@
 * {
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+    padding: 0;
 }
 
-header {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 2000;
+body {
+    min-height: 100vh;
+    background-color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+
+nav {
+    background-color: snow;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
     width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 33px 9%;
-    background: transparent;
+    color: black;
+    font-size: 20px;
+    transition: 0.6s ease;
 }
 
-.logo {
-    font-size: 30px;
-    font-weight: 700;
-    color: white;
+nav a:hover {
+    background-color: #f0f0f0;
+    text-decoration: underline;
+    color: black;
 }
 
-.navBar {
-    display: flex;
-}
-
-
-.navBar a{
-    color: white;
-    margin-left: 60px;
-    font-size: 17px;
-    font-weight: 600;
-    border-bottom: 2px solid transparent;
-    transition: all .55s ease;
-}
-
-.navBar a:hover {
-    border-bottom:2px solid white;
+nav li:first-child {
+    margin-right: auto;
 }
 
 
-#menu-icon {
-    font-size: 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
+
+.CO {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 350px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.bar {
+.CO li{
     width: 100%;
-    height: 3px;
-    background-color: white;
 }
 
-.holder {
-    height: 100%;
+.CO a { 
     width: 100%;
-    min-height: 100vh;
 }
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    background-color: #fff; 
+    z-index: 1000; 
+}
+
+nav li img {
+    width: 38px; 
+    height: auto; 
+    margin-left: 10px; 
+}
+
+.submitB {
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1090px;
+    margin-left: 35px;
+    width: 300px;
+}
+
+
+.submitB:hover {
+    background-color: rgb(126, 117, 117); 
+}
+
+#logo {
+    width: 100px; 
+    height: 50px; 
+}
+
+#cartInfo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+.search{
+    position: relative;
+    margin-top: 15px;
+    height: 10px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 8px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+} 
+
+
+.search .input{
+    border-color: #fff;
+    font-size: 14px;
+    width: 60px;
+    border: 0;
+    font-weight: 500;
+    background: transparent;
+    transition: width 0.3s ease;
+}
+
+.search:hover input {
+    width:100;
+}
+
+
+.submitB {
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1090px;
+    margin-left: 35px;
+    width: 300px;
+}
+
+.submitB:hover {
+    background-color: rgb(126, 117, 117); 
+}
+
+#logo {
+    width: 200px; 
+    height: 50px; 
+}
+
+
+
+
+
+
 
 
