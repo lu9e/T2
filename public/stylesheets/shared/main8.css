@@ -145,7 +145,7 @@
 
 .container-trend {
     max-width: 100%;
-    height: 80%;
+   height: 80%;
     margin: 0 auto;
     margin-top: 150px;
     padding: 90px;
@@ -208,7 +208,7 @@ p {
 }
 
 .movie-item3 img {
-    width: 70%;
+    width: 50%;
     height: 450px;
 }
 
@@ -222,9 +222,9 @@ p {
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    width: 640px; /* Set a fixed width */
-    height: 300px; /* Set a fixed height */
-    object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+    width: 640px; 
+    height: 300px; 
+    object-fit: cover; 
 
 }
 .movie-item2:hover {
@@ -239,15 +239,15 @@ p {
 
 .title-holder,.title-holder2,
 .reco {
-    color: black; /* Set text color to white */
+    color: black; 
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 40px;
-    padding: 2px; /* Add padding for spacing */
-    border-radius: 5px; /* Optionally, add rounded corners for a nicer look */
+    padding: 2px; 
+    border-radius: 5px; 
 }
 
-/* Adjustments for Recommended header */
+
 .reco {
     margin-top: 20px; /* Add some spacing between the sections */
     padding-top: 70px;
@@ -260,7 +260,7 @@ p {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Ensures items wrap if they exceed container width */
-    max-width: 1200px; /* Adjust max-width as needed */
+    max-width: 1200px; 
     margin: 0 auto; /* Centers the container horizontally */
 }
 
@@ -352,3 +352,160 @@ p {
 .container-trend h3{
     text-align: center;
 }
+
+
+/*setInterval*/
+.custom-gallery {
+    width: 100%;
+    max-width: 600px;
+    
+    margin: 50px auto;
+    overflow: hidden;
+}
+.custom-gallery-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.custom-gallery-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    
+}
+
+
+.custom-gallery-container {
+    display: flex;
+    transition: transform 0.5s ease; 
+}
+
+.CAT {
+    padding-top: 80px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-style: italic;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+
+
+.counter-container {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.counter {
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+@media (max-width: 580px) {
+    .counter-container {
+        margin: 0;
+    }
+}
+
+
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 30px; 
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.faq.active {
+    background-color: whitesmoke;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px;
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 5 Free';
+  color: black;
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+    color: black;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+  }
+  
+  .faq-title {
+    margin: 0 35px 0 0;
+  }
+  
+  .faq-answer {
+    display: none;
+    margin: 30px 0 0;
+    color: black;
+    font-size: 30px;
+  }
+  
+  .faq.active .faq-answer {
+    display: block;
+  }
+
+  .faq-toggle {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .faq-toggle:focus {
+    outline: 0;
+  }
+  
+  .faq-toggle .fa-times {
+    display: none;
+  }
+  
+  .faq.active .faq-toggle .fa-times {
+    color: #fff;
+    display: block;
+  }
+  
+  .faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+  }
+  
+  .faq.active .faq-toggle {
+    background-color: black;
+  }
+  
+
+
+

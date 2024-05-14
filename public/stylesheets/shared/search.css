@@ -1,8 +1,8 @@
-/* Modernize typography */
+
 h2.title-holder {
     font-size: 40px;
     font-weight: 500;
-    color: #333; /* Adjust to your color scheme */
+    color: #333; 
     font-style: italic;
 }
 
@@ -10,7 +10,7 @@ h2.title-holder {
 .form-item label {
     font-weight: 500;
     font-size: 30px;
-    color: #666; /* Adjust to your color scheme */
+    color: #666; 
 }
 
 .form-item input[type="text"],
@@ -24,7 +24,7 @@ h2.title-holder {
 
 /* Style search button */
 .btn {
-    background-color: black; /* Adjust to your color scheme */
+    background-color: black; 
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -34,7 +34,7 @@ h2.title-holder {
 }
 
 .btn:hover {
-    background-color: rgb(79, 77, 77); /* Adjust to your color scheme */
+    background-color: rgb(79, 77, 77); 
     color:white;
 }
 

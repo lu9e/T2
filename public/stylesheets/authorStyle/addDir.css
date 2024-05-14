@@ -3,7 +3,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: 500;
-    color: #333; /* Adjust to your color scheme */
+    color: #333; 
     margin-bottom: 20px;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .form-item input[type="text"]:focus {
-    border-color: green; /* Adjust to your color scheme */
+    border-color: green; 
 }
 
 .button-group {
@@ -52,7 +52,7 @@
 }
 
 .cancel {
-    background-color: #dc3545; /* Adjust to your color scheme */
+    background-color: #dc3545; 
 }
 
 .cancel:hover {
